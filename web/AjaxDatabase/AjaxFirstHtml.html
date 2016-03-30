@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script type="text/javascript">
+            function getXMLHttpRqstObj()
+                {
+                    if(window.XMLHttpRequest)
+                    {
+                        return new XMLHttpRequest();  //To support the browsers IE7+, Firefox, Chrome, Opera, Safari
+                    }
+                    else if(window.ActiveXObject)
+                    {
+                        return new ActiveXObject("Microsoft.XMLHTTP");  // For the browsers IE6, IE5
+                    }
+                    else
+                    {
+                        alert("Error due to old verion of browser upgrade your browser");
+                    }
+            
+                }
+                
+                
+                var rcvReq = getXMLHttpRqstObj();
+                function alterContent() 
+                {
+                    if (rcvReq.readyState ===4 || rcvReq.readyState ===0)
+                    {
+                       
+                        rcvReq.open("GET",'http://localhost:8080/JSPWebDataBase/AccessServlet',true);
+                        rcvReq.onreadystatechange = handleAlterContent; 
+                        rcvReq.send(null);
+                        
+                    }
+                }
+                
+                
+                function handleAlterContent()
+                {
+                    if (rcvReq.readyState ===4) 
+                        {
+                            document.getElementById("1").innerHTML = rcvReq.responseText;
+                        }
+                }
+        </script>
+    </head>
+    <body>
+        <h2>Ajax Demo</h2>
+        <p id="1"><input type="button" onclick="alterContent()" value ="AlterContent"/></p> 
+    </body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+1st page
+-->
+<html>
+    <head>
+        <title>Employees table for Database</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body style="background-color: aqua">
+        <h2>Please fill the Form of Employees table Database</h2>
+        <div>
+            <form action=http://localhost:8080/JSPWebDataBase/RecordInsertDB.jsp method="post">
+            <table border="2">
+                <tr><td><b>EmpNo:</b></td><td><input type="text" name="txtEmpNo" id="txtEmpNo"/></td></tr>
+                <tr><td><b>EName:</b></td><td><input type="text" name="txtEName" id="txtEName"/></td></tr>
+                <tr><td><b>Job:</b></td><td><select id="ddJob" name="ddJob">
+                                            <option value="Select Job">--Select Job--</option>
+                                            <option value="Manager">MANAGER</option>
+                                            <option value="Clerk">CLERK</option>
+                                            <option value="Salesman">SALESMAN</option>
+                                            <option value="Analyst">ANALYST</option>
+                                            <option value="President">PRESIDENT</option>
+                                    </select></td></tr>
+                <tr><td><b>Select Gender</b></td><td><input type="radio" name="rdMale" value="True" id="rdMale"/>Male
+                                                    <input type="radio" name="rdMale" value="False" id="rdFemale"/>Female</td></tr>
+                <tr><td><b> Select Hobbies:</b></td><td><input type="checkbox" name="ckboxCricket" value="Cricket"/>Cricket
+                                                        <input type="checkbox" name="ckboxCricket" value="Badminton"/>Badminton
+                                                        <input type="checkbox" name="ckboxCricket" value="Football"/>Football
+                                                        <input type="checkbox" name="ckboxCricket" value="Games"/>Games </td></tr>
+                                                   
+                <tr><td><b>Manager No.(MGR):</b></td><td><input type="text" name="txtManagerNo" id="txtManagerNo"/></td></tr>
+                <tr><td><b>Hire Date:</b></td><td><input type="date" name="txtHireDate" id="txtHireDate"/></td></tr>
+                <tr><td><b>Salary:</b></td><td><input type="text" name="txtSalary" id="txtSalary"/></td></tr>
+                <tr><td><b>Commission:</b></td><td><input type="text" name="txtCommission" id="txtCommission"/></td></tr>
+                <tr><td><b>DeptNo:</b></td><td><input type="text" name="txtDeptNo" id="txtDeptNo"/></td></tr>
+                
+                <tr><th><input type="submit" name="tsubmit" value="Submit"/></th>
+                    <th><input type="reset" name="treset" value="Clear"/></th>
+                </tr>
+            </table>
+           </form>
+        </div>
+    
+    </body>
+</html>
